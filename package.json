@@ -42,7 +42,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --cache --fix"
+      "cross-env NODE_ENV=development eslint --cache"
     ],
     "*.{js,jsx,ts,tsx,md}": "prettier --write",
     "*.json,.{eslintrc,prettierrc}": [
@@ -59,7 +59,7 @@
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,
-    "semi": false,
+    "semi": true,
     "singleQuote": true,
     "overrides": [
       {
