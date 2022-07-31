@@ -9,6 +9,7 @@ export default function Input() {
 }
 
 const InputBox = styled.input`
+  font-family: 'Rubik', sans-serif;
   width: 12rem;
   border: 2px solid #f9f5eb;
   border-radius: 4px;

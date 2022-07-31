@@ -49,7 +49,7 @@ table {
 
 @font-face {
   font-family: 'Rubik', sans-serif;
-  src: url(../../assets/Rubik.ttf) format('truetype');
+  src: url(../../assets/fonts/Rubik-VariableFont_wght.ttf) format('truetype');
 }
 
 /* body {
