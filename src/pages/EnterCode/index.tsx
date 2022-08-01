@@ -39,6 +39,7 @@ export default function EnterCode() {
 }
 
 const InputWrapper = styled.div`
+  font-family: 'Rubik', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,6 +93,7 @@ const SubmitButton = styled.button`
 `;
 
 const GoBack = styled.div`
+  font-family: 'Rubik', sans-serif;
   position: absolute;
   bottom: 1rem;
   right: 1rem;
