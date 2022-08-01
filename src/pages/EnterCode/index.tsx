@@ -31,10 +31,8 @@ export default function EnterCode() {
         </SubmitButton>
       </InputWrapper>
       <GoBack>
-        <Link to="/EnterCode">
-          Go Back
-          <AiOutlineArrowLeft />
-        </Link>
+        <AiOutlineArrowLeft />
+        <Link to="/">Go Back</Link>
       </GoBack>
     </>
   );
@@ -97,13 +95,15 @@ const GoBack = styled.div`
   position: absolute;
   bottom: 1rem;
   right: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffea11;
   a {
     color: #ffea11;
     font-weight: 700;
     text-decoration: underline wavy;
     transition: transform 0.3s;
-    :hover {
-      transform: scale(1.5);
-    }
   }
 `;
