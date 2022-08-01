@@ -1,6 +1,7 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
+import EnterCode from 'pages/EnterCode';
 import Home from '../pages/Home';
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
       <Background>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/EnterCode" element={<EnterCode />} />
           {/* <Route path="/room" element={<Room />} /> */}
         </Routes>
       </Background>
