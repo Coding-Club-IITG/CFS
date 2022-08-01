@@ -1,33 +1,42 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineArrowRight, AiOutlineArrowLeft } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 export default function EnterCode() {
   const [clicked, setClicked] = useState(false);
   const [inputText, setInputText] = useState('');
   return (
-    <InputWrapper>
-      <CodeInput
-        placeholder="Paste Code"
-        onChange={(e) => {
-          setInputText(e.target.value);
-        }}
-        disabled={clicked}
-      />
-      <SubmitButton
-        onClick={() => setClicked(true)}
-        disabled={inputText.length ? clicked : true}
-      >
-        {clicked ? (
-          'Connecting...'
-        ) : (
-          <span>
-            Connect
-            <AiOutlineArrowRight />
-          </span>
-        )}
-      </SubmitButton>
-    </InputWrapper>
+    <>
+      <InputWrapper>
+        <CodeInput
+          placeholder="Paste Code"
+          onChange={(e) => {
+            setInputText(e.target.value);
+          }}
+          disabled={clicked}
+        />
+        <SubmitButton
+          onClick={() => setClicked(true)}
+          disabled={inputText.length ? clicked : true}
+        >
+          {clicked ? (
+            'Connecting...'
+          ) : (
+            <span>
+              Connect
+              <AiOutlineArrowRight />
+            </span>
+          )}
+        </SubmitButton>
+      </InputWrapper>
+      <GoBack>
+        <Link to="/EnterCode">
+          Go Back
+          <AiOutlineArrowLeft />
+        </Link>
+      </GoBack>
+    </>
   );
 }
 
@@ -81,5 +90,20 @@ const SubmitButton = styled.button`
   }
   :disabled {
     cursor: not-allowed;
+  }
+`;
+
+const GoBack = styled.div`
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  a {
+    color: #ffea11;
+    font-weight: 700;
+    text-decoration: underline wavy;
+    transition: transform 0.3s;
+    :hover {
+      transform: scale(1.5);
+    }
   }
 `;
