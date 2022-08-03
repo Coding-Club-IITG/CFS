@@ -80,6 +80,14 @@ const SubmitButton = styled.button`
   gap: 4px;
   background: #f9f5eb;
   transition: 0.2s;
+  span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+
   :hover:not([disabled]) {
     background: #ebebeb;
   }
