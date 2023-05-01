@@ -24,7 +24,7 @@
       "url": "https://github.com/amilajack"
     }
   ],
-  "main": "./src/main/main.ts",
+  "main": "./src/start.ts",
   "scripts": {
     "build": "concurrently \"npm run build:main\" \"npm run build:renderer\"",
     "build:main": "cross-env NODE_ENV=production TS_NODE_TRANSPILE_ONLY=true webpack --config ./.erb/configs/webpack.config.main.prod.ts",
@@ -106,6 +106,7 @@
     "electron-debug": "^3.2.0",
     "electron-log": "^4.4.7",
     "electron-updater": "^5.0.3",
+    "express": "^4.18.1",
     "react": "^18.2.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
